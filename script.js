@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Cache DOM elements
     const navToggle = document.querySelector('.nav-toggle');
-    const mainNav = document.querySelector('#main-nav'); // Corrected: relies on id="main-nav" in HTML
+    const mainNav = document.querySelector('#main-nav');
     const menuNavItems = document.querySelectorAll('.menu-nav-item');
     const allAnchorLinks = document.querySelectorAll('a[href^="#"]');
     const menuSections = document.querySelectorAll('.menu-section');
@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuNavElement = document.querySelector('.menu-nav');
     const languageSelector = document.querySelector('.language-selector select');
 
+    let isProgrammaticScroll = false; // Flag to indicate a scroll initiated by code
+    let programmaticScrollTimeout;    // Timeout for resetting the flag
+    let scrollRAF;                    // requestAnimationFrame ID for scroll handling
+
     // Toggle Mobile Navigation
     if (navToggle && mainNav) {
         navToggle.addEventListener('click', () => {
@@ -17,15 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navToggle.setAttribute('aria-expanded', isActive.toString());
         });
     }
-
-    // Menu Navigation Item Click (for initial active state or manual click)
-    menuNavItems.forEach(item => {
-        item.addEventListener('click', function() {
-            menuNavItems.forEach(navItem => navItem.classList.remove('active'));
-            this.classList.add('active');
-            // Smooth scroll will be handled by the generic anchor link handler
-        });
-    });
 
     // Smooth Scroll for all anchor links
     allAnchorLinks.forEach(anchor => {
@@ -59,14 +54,35 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const totalOffset = headerHeight + menuNavHeight;
             const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
-            // Scroll to align the top of the section with the bottom of sticky elements.
-            // A small negative value (e.g., -10) can be added if a little space above the section is desired.
             const offsetPosition = elementPosition - totalOffset; 
+
+            // Clear any existing programmatic scroll timeout
+            if (programmaticScrollTimeout) {
+                clearTimeout(programmaticScrollTimeout);
+            }
+
+            // If the clicked link is a menu navigation item, set it active immediately
+            if (this.classList.contains('menu-nav-item')) {
+                menuNavItems.forEach(navItem => navItem.classList.remove('active'));
+                this.classList.add('active');
+            }
+
+            isProgrammaticScroll = true; // Set the flag
 
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+
+            // Reset the flag after a delay and trigger a scroll check
+            // The duration (e.g., 600ms) should be slightly longer than typical smooth scroll.
+            programmaticScrollTimeout = setTimeout(() => {
+                isProgrammaticScroll = false;
+                // After the timeout, call checkScroll to ensure the correct item is highlighted
+                // based on the final scroll position or any manual scrolling that occurred.
+                if (scrollRAF) window.cancelAnimationFrame(scrollRAF); // Cancel any pending rAF
+                scrollRAF = window.requestAnimationFrame(checkScroll); // Schedule an immediate check
+            }, 600); // Adjust this value (500-700ms) if needed.
         });
     });
 
@@ -74,16 +90,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (backToTopButton) {
         backToTopButton.addEventListener('click', (e) => {
             e.preventDefault();
+
+            // Clear any existing programmatic scroll timeout
+            if (programmaticScrollTimeout) {
+                clearTimeout(programmaticScrollTimeout);
+            }
+            isProgrammaticScroll = true; 
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            // Optionally close mobile nav if open
+            
+            // Optionally close mobile nav if open and it was a click on back-to-top
             if (mainNav && mainNav.classList.contains('active')) {
                 mainNav.classList.remove('active');
                 if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
             }
+
+            programmaticScrollTimeout = setTimeout(() => {
+                isProgrammaticScroll = false;
+                if (scrollRAF) window.cancelAnimationFrame(scrollRAF);
+                scrollRAF = window.requestAnimationFrame(checkScroll); // Re-check active state
+            }, 600); 
         });
     }
 
-    let scrollRAF;
     // Scroll Event Handling
     function checkScroll() {
         const scrollY = window.scrollY;
@@ -118,20 +147,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Highlight active menu nav item based on scroll position
-        // activationPoint is where the top of the section should be for it to be considered active
+        // Always update active menu item, regardless of programmatic scroll state
         const activationPoint = headerHeight + menuNavHeight + 50; // 50px buffer below sticky elements
         let currentActiveSectionId = null;
 
+        // First pass: find the currently active section
         menuSections.forEach(section => {
             const sectionRect = section.getBoundingClientRect();
             // A section is "active" if the activationPoint is within its visible bounds.
-            // (i.e., section top is above or at activationPoint, and section bottom is below activationPoint)
             if (sectionRect.top <= activationPoint && sectionRect.bottom > activationPoint) {
                 currentActiveSectionId = section.getAttribute('id');
             }
         });
         
-        menuNavItems.forEach(item => item.classList.remove('active'));
+        // Update the menu items regardless of previous state
+        menuNavItems.forEach(item => item.classList.remove('active')); // Remove active class from all items
         if (currentActiveSectionId) {
             const activeNavItem = document.querySelector(`.menu-nav-item[href="#${currentActiveSectionId}"]`);
             if (activeNavItem) {
@@ -145,10 +175,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Optimized scroll listener
     window.addEventListener('scroll', () => {
-        if (scrollRAF) {
-            window.cancelAnimationFrame(scrollRAF);
+        // Only update during non-programmatic scrolls
+        if (!isProgrammaticScroll) {
+            if (scrollRAF) {
+                window.cancelAnimationFrame(scrollRAF);
+            }
+            scrollRAF = window.requestAnimationFrame(checkScroll);
         }
-        scrollRAF = window.requestAnimationFrame(checkScroll);
     });
 
     // Language selector functionality (placeholder)
