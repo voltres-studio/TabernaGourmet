@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Taberna Gourmet - Carta Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <i class="fas fa-wine-glass-alt logo-icon"></i>
+                <h1>La Taberna Gourmet</h1>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="main-nav">
+                <div class="language-selector">
+                    <select>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+                <ul>
+                    <li><a href="#menu">Carta</a></li>
+                    <li><a href="#story">Historia</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#location">Ubicación</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Nuestra Carta</h2>
+            <p>Descubre una experiencia gastronómica única con los mejores ingredientes y sabores tradicionales con un toque contemporáneo.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="hero-btn btn-primary">Ver Carta</a>
+                <a href="#location" class="hero-btn btn-secondary">Cómo Llegar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <div class="menu-nav" id="menu">
+        <div class="container">
+            <div class="menu-nav-container">
+                <a href="#desayunos" class="menu-nav-item">
+                    <i class="fas fa-coffee"></i>
+                    <span>Desayunos</span>
+                </a>
+                <a href="#entrantes" class="menu-nav-item">
+                    <i class="fas fa-cheese"></i>
+                    <span>Entrantes</span>
+                </a>
+                <a href="#principales" class="menu-nav-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Principales</span>
+                </a>
+                <a href="#tapas" class="menu-nav-item">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <span>Tapas</span>
+                </a>
+                <a href="#postres" class="menu-nav-item">
+                    <i class="fas fa-ice-cream"></i>
+                    <span>Postres</span>
+                </a>
+                <a href="#vinos" class="menu-nav-item">
+                    <i class="fas fa-wine-bottle"></i>
+                    <span>Vinos</span>
+                </a>
+                <a href="#cocteles" class="menu-nav-item">
+                    <i class="fas fa-cocktail"></i>
+                    <span>Cócteles</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Sections -->
+    <section id="desayunos" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Para Empezar el Día</p>
+                <h2 class="section-title">Desayunos</h2>
+                <p class="section-description">Disponibles de 8:00 a 12:00. Todos nuestros desayunos incluyen café o té.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Tostada con Tomate</h3>
+                        <span class="menu-item-price">€3,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Pan artesanal tostado con tomate rallado, aceite de oliva virgen extra y sal en escamas.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Tostada con Aguacate</h3>
+                        <span class="menu-item-price">€5,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Pan de masa madre con aguacate, huevo poché, semillas de sésamo y un toque de chile.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                            <span class="menu-item-badge">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Croissant Relleno</h3>
+                        <span class="menu-item-price">€4,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Croissant artesanal relleno de jamón ibérico y queso brie fundido.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Tortilla Española</h3>
+                        <span class="menu-item-price">€4,20</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Porción de tortilla de patatas tradicional, ligeramente cuajada, acompañada de pan tostado.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Clásico</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Bowl de Yogur y Granola</h3>
+                        <span class="menu-item-price">€6,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Yogur griego con granola casera, frutos rojos frescos, plátano y miel de flores.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                            <span class="menu-item-tag">Saludable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Huevos Benedictine</h3>
+                        <span class="menu-item-price">€8,90</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Dos huevos pochados sobre muffin inglés con salmón ahumado y salsa holandesa casera.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-badge">Especial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="entrantes" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Para Compartir</p>
+                <h2 class="section-title">Entrantes</h2>
+                <p class="section-description">Perfectos para compartir y comenzar la experiencia gastronómica.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Tabla de Quesos Artesanales</h3>
+                        <span class="menu-item-price">€16,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Selección de quesos nacionales e internacionales acompañados de mermelada casera, frutos secos y pan artesanal.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                            <span class="menu-item-badge">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Jamón Ibérico de Bellota</h3>
+                        <span class="menu-item-price">€24,00</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Jamón ibérico de bellota D.O. Guijuelo cortado a cuchillo, acompañado de pan cristal con tomate.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Gourmet</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Croquetas Caseras</h3>
+                        <span class="menu-item-price">€9,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Surtido de croquetas caseras: jamón ibérico, boletus y gamba roja. 6 unidades.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Ensalada de Burrata</h3>
+                        <span class="menu-item-price">€14,20</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Burrata fresca sobre tomates de temporada, rúcula, piñones tostados y pesto casero de albahaca.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Carpaccio de Ternera</h3>
+                        <span class="menu-item-price">€15,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Finas láminas de ternera con rúcula, parmesano, alcaparras y aceite de trufa.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Pulpo a la Brasa</h3>
+                        <span class="menu-item-price">€18,90</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Pulpo braseado sobre parmentier de patata ahumada, pimentón de la Vera y aceite de oliva.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-badge">Chef's Choice</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="principales" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Nuestras Especialidades</p>
+                <h2 class="section-title">Platos Principales</h2>
+                <p class="section-description">Elaborados con ingredientes frescos de temporada y técnicas culinarias tradicionales.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Risotto de Setas Silvestres</h3>
+                        <span class="menu-item-price">€18,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Cremoso risotto con variedad de setas silvestres, parmesano reggiano de 24 meses y aceite de trufa.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Salmón al Horno</h3>
+                        <span class="menu-item-price">€22,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Filete de salmón noruego al horno con costra de hierbas, puré de coliflor y verduras de temporada.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Carrillera Ibérica</h3>
+                        <span class="menu-item-price">€24,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Carrillera de cerdo ibérico cocinada a baja temperatura durante 12 horas con reducción de vino tinto y parmentier de patata.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-badge">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Entrecot de Vaca Madurada</h3>
+                        <span class="menu-item-price">€26,90</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Entrecot de vaca madurada 30 días, cocinado a la parrilla con patatas asadas y chimichurri casero.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Paella de Marisco</h3>
+                        <span class="menu-item-price">€22,00 (por persona)</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Arroz con carabineros, mejillones, almejas y calamar. Mínimo 2 personas. Tiempo de preparación: 30 minutos.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Especialidad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Canelones de Espinacas</h3>
+                        <span class="menu-item-price">€16,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Canelones rellenos de espinacas y ricotta, gratinados con bechamel trufada y parmesano.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tapas" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Tradición Española</p>
+                <h2 class="section-title">Tapas</h2>
+                <p class="section-description">Pequeñas delicias para disfrutar en cualquier momento.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Patatas Bravas</h3>
+                        <span class="menu-item-price">€6,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Patatas crujientes con salsa brava casera y alioli. El clásico español.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Boquerones en Vinagre</h3>
+                        <span class="menu-item-price">€8,20</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Filetes de boquerón marinados en vinagre, ajo y perejil. Servidos con pan tostado.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Calamares a la Andaluza</h3>
+                        <span class="menu-item-price">€10,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Calamares frescos rebozados y fritos, servidos con mayonesa de lima.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-badge">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Gambas al Ajillo</h3>
+                        <span class="menu-item-price">€12,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Gambas salteadas con ajo, guindilla y aceite de oliva. Servidas en cazuela de barro caliente.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Pimientos de Padrón</h3>
+                        <span class="menu-item-price">€7,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Pimientos de Padrón fritos con sal en escamas. Unos pican y otros no.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Tortilla de Patatas</h3>
+                        <span class="menu-item-price">€7,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Tortilla de patatas tradicional, ligeramente cuajada. Servida en porción individual.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Clásico</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Croquetas de Jamón</h3>
+                        <span class="menu-item-price">€8,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Cremosas croquetas caseras de jamón ibérico. 6 unidades.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Pan con Tomate</h3>
+                        <span class="menu-item-price">€4,20</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Pan rústico tostado con tomate rallado, aceite de oliva virgen extra y sal.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="postres" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Dulce Final</p>
+                <h2 class="section-title">Postres</h2>
+                <p class="section-description">Elaborados diariamente por nuestro chef pastelero.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Coulant de Chocolate</h3>
+                        <span class="menu-item-price">€7,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Bizcocho de chocolate con corazón fundido, acompañado de helado artesanal de vainilla de Madagascar.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-badge">Favorito</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Tiramisú Casero</h3>
+                        <span class="menu-item-price">€6,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Clásico italiano con bizcochos de café, crema de mascarpone y cacao. Elaboración tradicional.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Cheesecake de Frutos Rojos</h3>
+                        <span class="menu-item-price">€6,90</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Tarta de queso cremosa con base de galleta y coulis de frutos rojos de temporada.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Crema Catalana</h3>
+                        <span class="menu-item-price">€5,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Crema suave con caramelo crujiente. El postre tradicional catalán.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Clásico</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Tarta de Manzana</h3>
+                        <span class="menu-item-price">€6,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Tarta de manzana caramelizada con masa quebrada casera y helado de canela.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Surtido de Sorbetes</h3>
+                        <span class="menu-item-price">€5,90</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Selección de sorbetes artesanales: limón, frambuesa y mango.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Sin Gluten</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vinos" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Nuestra Bodega</p>
+                <h2 class="section-title">Vinos</h2>
+                <p class="section-description">Selección de vinos nacionales e internacionales para acompañar tu experiencia gastronómica.</p>
+            </div>
+            <div class="wine-list">
+                <div class="wine-category">
+                    <h3 class="wine-category-title">Vinos Tintos</h3>
+                    <div class="wine-items">
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Ribera del Duero Crianza</h4>
+                                <span class="wine-item-price">€24,50</span>
+                            </div>
+                            <p class="wine-item-details">Tempranillo. Notas de frutos rojos, vainilla y especias.</p>
+                            <p class="wine-item-origin">D.O. Ribera del Duero</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Rioja Reserva</h4>
+                                <span class="wine-item-price">€28,00</span>
+                            </div>
+                            <p class="wine-item-details">Tempranillo, Garnacha, Graciano. Elegante, con notas de fruta madura y roble.</p>
+                            <p class="wine-item-origin">D.O.Ca. Rioja</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Priorat</h4>
+                                <span class="wine-item-price">€32,50</span>
+                            </div>
+                            <p class="wine-item-details">Garnacha, Cariñena. Potente, mineral y con carácter.</p>
+                            <p class="wine-item-origin">D.O.Q. Priorat</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Malbec Argentino</h4>
+                                <span class="wine-item-price">€26,00</span>
+                            </div>
+                            <p class="wine-item-details">Malbec. Intenso, con notas de frutos negros y chocolate.</p>
+                            <p class="wine-item-origin">Mendoza, Argentina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-category">
+                    <h3 class="wine-category-title">Vinos Blancos</h3>
+                    <div class="wine-items">
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Albariño</h4>
+                                <span class="wine-item-price">€22,00</span>
+                            </div>
+                            <p class="wine-item-details">Albariño. Fresco, afrutado con notas cítricas y florales.</p>
+                            <p class="wine-item-origin">D.O. Rías Baixas</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Verdejo</h4>
+                                <span class="wine-item-price">€19,50</span>
+                            </div>
+                            <p class="wine-item-details">Verdejo. Aromático, con notas de hierba fresca y frutas tropicales.</p>
+                            <p class="wine-item-origin">D.O. Rueda</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Chardonnay</h4>
+                                <span class="wine-item-price">€24,00</span>
+                            </div>
+                            <p class="wine-item-details">Chardonnay. Equilibrado, con notas de frutas blancas y ligeros toques de vainilla.</p>
+                            <p class="wine-item-origin">D.O. Somontano</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Sauvignon Blanc</h4>
+                                <span class="wine-item-price">€21,50</span>
+                            </div>
+                            <p class="wine-item-details">Sauvignon Blanc. Fresco y vibrante, con notas cítricas y herbáceas.</p>
+                            <p class="wine-item-origin">Marlborough, Nueva Zelanda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-category">
+                    <h3 class="wine-category-title">Vinos Rosados y Espumosos</h3>
+                    <div class="wine-items">
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Rosado Provenzal</h4>
+                                <span class="wine-item-price">€23,00</span>
+                            </div>
+                            <p class="wine-item-details">Garnacha, Cinsault. Seco, elegante y con notas de frutos rojos frescos.</p>
+                            <p class="wine-item-origin">Provence, Francia</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Cava Brut Nature Reserva</h4>
+                                <span class="wine-item-price">€24,50</span>
+                            </div>
+                            <p class="wine-item-details">Macabeo, Xarel·lo, Parellada. Fino y elegante, con burbujas persistentes.</p>
+                            <p class="wine-item-origin">D.O. Cava</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Champagne Brut</h4>
+                                <span class="wine-item-price">€65,00</span>
+                            </div>
+                            <p class="wine-item-details">Chardonnay, Pinot Noir, Pinot Meunier. Elegante, con notas de brioche y cítricos.</p>
+                            <p class="wine-item-origin">Champagne, Francia</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Rosado Navarro</h4>
+                                <span class="wine-item-price">€18,50</span>
+                            </div>
+                            <p class="wine-item-details">Garnacha. Fresco y afrutado, con notas de fresa y frambuesa.</p>
+                            <p class="wine-item-origin">D.O. Navarra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-category">
+                    <h3 class="wine-category-title">Vinos por Copa</h3>
+                    <div class="wine-items">
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Tinto Crianza</h4>
+                                <span class="wine-item-price">€4,50</span>
+                            </div>
+                            <p class="wine-item-details">Tempranillo. D.O. Rioja</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Blanco Verdejo</h4>
+                                <span class="wine-item-price">€4,00</span>
+                            </div>
+                            <p class="wine-item-details">Verdejo. D.O. Rueda</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Rosado</h4>
+                                <span class="wine-item-price">€4,00</span>
+                            </div>
+                            <p class="wine-item-details">Garnacha. D.O. Navarra</p>
+                        </div>
+                        <div class="wine-item">
+                            <div class="wine-item-header">
+                                <h4 class="wine-item-name">Cava Brut</h4>
+                                <span class="wine-item-price">€5,00</span>
+                            </div>
+                            <p class="wine-item-details">Macabeo, Xarel·lo, Parellada. D.O. Cava</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cocteles" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Mixología</p>
+                <h2 class="section-title">Cócteles</h2>
+                <p class="section-description">Elaborados con ingredientes premium y técnicas de coctelería moderna.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Gin Tonic Premium</h3>
+                        <span class="menu-item-price">€12,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Ginebra premium, tónica artesanal y botánicos seleccionados. Servido en copa balón con hielo cristalino.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-badge">Signature</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Mojito Clásico</h3>
+                        <span class="menu-item-price">€9,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Ron blanco, lima fresca, azúcar de caña, hierbabuena y soda. Refrescante y aromático.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Negroni</h3>
+                        <span class="menu-item-price">€10,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Ginebra, Campari y vermut rojo en partes iguales. Servido con hielo y twist de naranja.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Margarita</h3>
+                        <span class="menu-item-price">€10,80</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Tequila, triple sec y zumo de lima fresco. Servido con borde de sal.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Old Fashioned</h3>
+                        <span class="menu-item-price">€11,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Bourbon, azúcar, angostura y twist de naranja. Un clásico atemporal.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Aperol Spritz</h3>
+                        <span class="menu-item-price">€8,90</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Aperol, cava brut y soda. Refrescante y ligeramente amargo.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Piña Colada</h3>
+                        <span class="menu-item-price">€9,50</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Ron blanco, leche de coco y zumo de piña natural. Tropical y cremoso.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Bloody Mary</h3>
+                        <span class="menu-item-price">€10,20</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <p class="menu-item-description">Vodka, zumo de tomate, especias y limón. Picante y revitalizante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="story-container">
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="Chef">
+                </div>
+                <div class="story-content">
+                    <p class="story-subtitle">Nuestra Historia</p>
+                    <h2 class="story-title">Tradición y Pasión</h2>
+                    <p class="story-text">La Taberna Gourmet abrió sus puertas en 2010, fundada por la familia Martínez con más de tres generaciones dedicadas a la gastronomía. Lo que comenzó como un pequeño bar de tapas se ha convertido en un referente gastronómico de la ciudad.</p>
+                    <p class="story-text">Nuestra filosofía se basa en el respeto por el producto, la cocina tradicional con toques contemporáneos y el servicio cercano. Trabajamos con productores locales para garantizar la máxima calidad y frescura en cada plato.</p>
+                    <p class="story-text">Cada receta tiene una historia que contar, transmitida de generación en generación y perfeccionada con el paso del tiempo. Te invitamos a formar parte de nuestra historia y disfrutar de una experiencia gastronómica única.</p>
+                    <div class="story-signature">Carlos Martínez, Chef</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Nuestro Espacio</p>
+                <h2 class="section-title">Galería</h2>
+                <p class="section-description">Descubre nuestro ambiente y algunas de nuestras creaciones culinarias.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Interior del restaurante">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Plato gourmet">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Risotto">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80" alt="Cóctel">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="Postre">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Terraza">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Bar">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Plato de salmón">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Encuéntranos</p>
+                <h2 class="section-title">Nuestra Ubicación</h2>
+                <p class="section-description">Estamos ubicados en el centro histórico de la ciudad, en un edificio con más de 100 años de historia.</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="location-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="info-title">Dirección</h3>
+                    <p class="info-text">Calle Principal 123<br>28001 Madrid, España</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="info-title">Horario</h3>
+                    <p class="info-text">Lunes a Jueves: 12:00 - 00:00<br>Viernes y Sábado: 12:00 - 02:00<br>Domingo: 12:00 - 23:00</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="info-title">Contacto</h3>
+                    <p class="info-text">+34 123 456 789<br>info@latabernagourmet.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+        <div class="container">
+            <div class="qr-container">
+                <div class="section-header">
+                    <p class="section-subtitle">Carta Digital</p>
+                    <h2 class="section-title">Escanea Nuestro QR</h2>
+                    <p class="section-description">Accede a nuestra carta completa desde tu dispositivo móvil en cualquier momento.</p>
+                </div>
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://latabernagourmet.com/menu" alt="QR Code">
+                </div>
+                <p class="qr-instructions">Escanea el código QR con la cámara de tu smartphone para acceder a nuestra carta digital completa. También puedes guardarla en tus favoritos para consultarla cuando quieras.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-wine-glass-alt"></i>
+                        <span>La Taberna Gourmet</span>
+                    </div>
+                    <p class="footer-about">Experiencia gastronómica única con los mejores ingredientes y recetas tradicionales con un toque contemporáneo.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TripAdvisor">
+                            <i class="fab fa-tripadvisor"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#menu"><i class="fas fa-chevron-right"></i> Carta</a></li>
+                        <li><a href="#story"><i class="fas fa-chevron-right"></i> Historia</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Galería</a></li>
+                        <li><a href="#location"><i class="fas fa-chevron-right"></i> Ubicación</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <div class="footer-contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p>Calle Principal 123</p>
+                            <p>28001 Madrid, España</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <p>+34 123 456 789</p>
+                            <p>+34 987 654 321</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p>info@latabernagourmet.com</p>
+                            <p>reservas@latabernagourmet.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p class="footer-newsletter">Suscríbete a nuestro newsletter para recibir noticias sobre eventos especiales, nuevos platos y ofertas exclusivas.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Tu email" required>
+                        <button type="submit" class="newsletter-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 La Taberna Gourmet. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
